@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "BTS",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

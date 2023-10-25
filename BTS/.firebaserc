@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-pagina-web": {
+      "hosting": {
+        "BTS": [
+          "angular-pagina-web"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-pagina-web"
+  }
+}
