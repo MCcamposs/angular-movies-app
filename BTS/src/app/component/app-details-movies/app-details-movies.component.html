@@ -1,0 +1,33 @@
+<!-----SIMILAR MOVIES------->
+
+<figure class="figure" *ngFor="let movie of similarMovies">
+    <img [src]="movie.imgURL"
+    style="max-width: 110px;"
+    class="figure-img img-fluid rounded img-thumbnail" 
+    alt="...">
+    <figcaption class="figure-caption">{{movie.MovieTitle}} </figcaption>
+    <figcaption class="figure-caption"><i class="bi bi stars"></i><b>{{movie.MovieRate}}</b></figcaption>
+</figure>
+
+
+
+
+<!-- <figure class="figure">
+    <img src="../../../assets/images/jkM.jpg"
+    style="max-width: 110px;"
+    class="figure-img img-fluid rounded img-thumbnail" 
+    alt="...">
+    <figcaption class="figure-caption">Movie #2 </figcaption>
+    <figcaption class="figure-caption"><i class="bi bi stars"></i> <b>rate: 9,5/10</b> </figcaption>
+</figure>
+
+
+<figure class="figure">
+    <img src="../../../assets/images/jkM.jpg"
+    style="max-width: 110px;"
+    class="figure-img img-fluid rounded img-thumbnail" 
+    alt="...">
+    <figcaption class="figure-caption">Movie #3 </figcaption>
+    <figcaption class="figure-caption"><i class="bi bi stars"></i><b>rate: 9,5/10</b></figcaption>
+</figure> -->
+

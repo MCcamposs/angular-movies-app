@@ -1,0 +1,29 @@
+<!-- REVIEWS -->
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item" *ngFor="let rate of MovieRates;let i=index">
+    <h2 class="accordion-header">
+      <button class="accordion-button no-selection" type="button" data-bs-toggle="collapse" 
+        [attr.data-bs-target]="'#collapseOne'+i" aria-expanded="true" 
+        [attr.aria-controls]="'collapseOne'+i" 
+        data-bs-parent="#accordionExample"> <!-- Poner el attr data parent -->
+        <i class="bi bi-star"> </i> <b>rate: {{rate.rate}}/10</b> - Review #{{i+1}}
+      </button>
+    </h2>
+    <!-- "accordion-collapse collapse": collpase default -->
+    <div id="collapseOne{{i}}" class="accordion-collapse collapse" 
+     aria-labelledby="headingOne"> 
+      <div class="accordion-body">
+        <p>{{rate.review}}</p>
+        <p class="blockquote-footer">
+          {{rate.author}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ngClass
+    se utiliza para agregar la clase "show" a un elemento específico del acordeón, 
+    lo que inicialmente lo hace visible. La expresión en [ngClass] se evalúa y, en este caso,
+    la clase "show" se agrega cuando i === 0 es true. Esto asegura que el primer elemento del
+    acordeón esté abierto por defecto, mientras que los demás están cerrados. -->

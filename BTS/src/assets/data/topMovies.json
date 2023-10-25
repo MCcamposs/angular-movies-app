@@ -1,0 +1,20 @@
+[
+    {
+      "ImagenURL": "../../../assets/images/jk.webp",
+      "CardTitle": "Card Title",
+      "CardText": "Texto para esta parte",
+      "Trailer": "trailer"
+    },
+    {
+        "ImagenURL": "../../../assets/images/jk.webp",
+        "CardTitle": "Card Title",
+        "CardText": "Texto para esta parte",
+        "Trailer": "trailer"
+    },
+    {
+        "ImagenURL": "../../../assets/images/jk.webp",
+        "CardTitle": "Card Title",
+        "CardText": "Texto para esta parte",
+        "Trailer": "trailer"
+    }
+  ]

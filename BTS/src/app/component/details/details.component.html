@@ -1,0 +1,96 @@
+<!-------MOVIES------->
+<h1> Movies Title </h1>
+<br>
+
+<div class="row">
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-6">
+        <p class="lead">This is going to be a placeholder for the movie</p> <!--text larger-->
+        <!--Aquí van las columnas con más información-->
+
+        <div class="row">
+            <div class="col-md-4" >
+                <!----- 1 CARD   -->
+                <div class="card">
+                    <div class="card-header">Stars</div>
+                    <ul class="list-group list-group-flush" *ngFor="let names of stars">
+                        <li class="list-group-item">{{names.Starts}}</li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">  
+                 <!----- 2 CARD ----> 
+                <div class="card">
+                    <div class="card-header">Directors</div>
+                    <ul class="list-group list-group-flush"  *ngFor="let names of stars">
+                        <li class="list-group-item">{{names.Starts}}</li>
+                        
+                    </ul>
+                </div> 
+            </div>
+
+            <div class="col-md-4">
+                 <!----- 3 CARD ----> 
+                <div class="card">
+                    <div class="card-header">Genres</div>
+                    <ul class="list-group list-group-flush" *ngFor="let names of stars">
+                        <li class="list-group-item">{{names.Starts}}</li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<hr>
+<br>
+<!-------Actors------->
+<div class="row">
+    <h1>Actors</h1>
+    <br>
+    <div class="col-md-12 text-center">
+        <app-app-details-actors></app-app-details-actors>
+        <br>
+        <a class="btn btn-warning" [routerLink]="['/details/actors/', movieId]">View all actors</a>
+    </div>
+
+</div>
+<hr>
+
+
+<!-------REVIEWS------->
+<div class="row">
+    <h1>Reviews</h1>
+    <br>
+    <div class="col-md-12 text-center">
+        <app-app-details-reviews></app-app-details-reviews>
+    </div>
+    <!--BTN-->
+    <div class="text-center">
+        <a class="btn btn-warning" [routerLink]="['/details/review/', movieId]">View all reviews</a>
+    </div>
+</div>
+<hr>
+
+
+<!-------similar movies------->
+<div class="row">
+    <h1>Similars Movies</h1>
+    <br>
+    <div class="col-md-12 text-center">
+        <app-app-details-movies></app-app-details-movies>
+    </div>
+    <div class="text-center">
+        <a class="btn btn-warning"[routerLink]="['/details/movies/', movieId]">View all similar movies</a>
+    </div>
+</div>
+<hr>
+

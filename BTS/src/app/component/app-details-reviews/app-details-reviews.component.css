@@ -1,0 +1,6 @@
+.no-selection {
+    background-color: transparent !important; /* Fondo transparente */
+    border: none !important; /* Sin borde */
+    box-shadow: none !important; /* Sin sombra */
+    color: #000 !important; /* Color de texto predeterminado */
+  }

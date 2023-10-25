@@ -1,0 +1,37 @@
+[
+{
+    "imageURL": "../../../assets/images/jk.webp",
+    "title": "Movie #1 title",
+    "actors": "Movie #1 actors",
+    "year": "2023",
+    "rate": 9.5,
+    "trophy": 1
+  },
+
+  {
+    "imageURL": "../../../assets/images/jk.webp",
+    "title": "Movie #2 title",
+    "actors": "Movie #2 actors",
+    "year": "2023",
+    "rate": 9.5,
+    "trophy": 1
+  },
+
+  {
+    "imageURL": "../../../assets/images/jk.webp",
+    "title": "Movie #3 title",
+    "actors": "Movie #3 actors",
+    "year": "2023",
+    "rate": 9.5,
+    "trophy": 1
+  },
+
+  {
+    "imageURL": "../../../assets/images/jk.webp",
+    "title": "Movie #4 title",
+    "actors": "Movie #4 actors",
+    "year": "2023",
+    "rate": 9.5,
+    "trophy": 1
+  }
+]
