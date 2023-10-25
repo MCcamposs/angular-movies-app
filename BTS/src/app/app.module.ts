@@ -12,13 +12,13 @@ import { AppDetailsActorsComponent } from './component/app-details-actors/app-de
 import { SearchComponent } from './component/search/search.component';
 import { AppRoutesModule } from './modules/app.routers';
 import { NotFoundComponent } from './component/not-found/not-found.component';
-import { MyIfDirective } from './directives/my-if.directive';
 /* FIREBASE */
 import { AngularFireModule } from '@angular/fire/compat'
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
 import { environment } from '../environments/environment';
 /* import HttpClienteModule */
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderDirective } from './directives/header.directive'
 
 @NgModule({
   /* DECLARANDO TODOS LOS COMPONENTES */
@@ -33,8 +33,9 @@ import { HttpClientModule } from '@angular/common/http'
     AppDetailsActorsComponent,
     SearchComponent,
     NotFoundComponent,
+    HeaderDirective,
     /* DIRECTIVE */
-    MyIfDirective,
+    
   ],
   /* DECLARANDO LOS MODULE */
   imports: [
