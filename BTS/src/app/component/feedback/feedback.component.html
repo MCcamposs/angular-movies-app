@@ -1,1 +1,89 @@
-<p>feedback works!</p>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form #feedbackfrom="ngForm" (ngSubmint)="SubmintFeedback()"> 
+                <legend>Let us know what you think</legend>
+                <hr>
+        
+                <div class="mb-3">
+                    <!--"form-label" se utiliza para estilizar las etiquetas de formulario. Puede dar formato al texto, aplicar colores-->
+                    <label for="emeailAddres" class="form-label"> Email address </label>
+                    <!-- lugar donde escribir el correo -->
+                    <!--"form-control" = estilizar los campos de entrada de formulario. -->
+                    <input 
+                        type="email"
+                        class="form-control"
+                        id="emeailAddres"
+                        placeholder="ejemplo@email.com"
+                        name = "emeailAddres"
+                        [(ngModel)] = "feedback.emeailAddres"
+                    >
+                </div>
+        <!-- NUMERO DE TELEFONO -->
+                <div class="mb-3">
+                    <label for="PhoneNumber" class="form-label"> Numero de telefono</label>
+                    <input 
+                        type="text"
+                        class="form-control"
+                        id="PhoneNumber"
+                        placeholder="numero personal"
+                        name = "PhoneNumber"
+                        [(ngModel)] = "feedback.PhoneNumber"
+                    >
+                </div>
+        
+        <!--RATE EXPERIENCE -->
+                <div class="mb-3">
+                    <label for="rateExperience" class="form-label"> Rate Experience</label>
+                    <input 
+                        type="range"
+                        class="form-range"
+                        min="0"
+                        max="10"
+                        step="1"
+                        id="rateExperience"
+                        name = "rateExperience"
+                        [(ngModel)] = "feedback.rate" 
+                    > <!-- tiene que sar igual a las cont creadas en el data/model -->
+                    <div>{{feedback.rate}}</div>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="Title" class="form-label"> Title</label>
+                    <input 
+                        type="text"
+                        class="form-control"
+                        id="title"
+                        placeholder="Your feedback title"
+                        name = "Title"
+                        [(ngModel)] = "feedback.feedbackTtitle" 
+                    >
+                </div>
+        
+                <div class="mb-3">
+                    <label for="feedback" class="form-label"> feedback </label>
+                    <input 
+                        type="text"
+                        class="form-control"
+                        id="feedback"
+                        placeholder="Your feedback"
+                        name = "feedback"
+                        [(ngModel)] = "feedback.feedback" 
+                    >
+                </div>
+        
+        
+                <div class="mb-3">
+                   <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-send"></i> Submint
+                   </button>
+                </div>
+                
+        
+            </form>
+        </div>
+    </div>
+
+   
+</div>
