@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <form #feedbackfrom="ngForm" (ngSubmint)="SubmintFeedback()"> 
+            <form #feedbackform="ngForm" (ngSubmint)="SubmitFeedback()"> 
                 <legend>Let us know what you think</legend>
                 <hr>
         
@@ -25,7 +25,7 @@
                         #emailInput = "ngModel"
                     >
 
-                    <div class="text-danger" *ngIf="emailInput.invalid && (emailInput.dirty || feedbackfrom.submitted)">
+                    <div class="text-danger" *ngIf="emailInput.invalid && (emailInput.dirty || feedbackform.submitted)">
                         <div *ngIf="emailInput.hasError('required')">Email is required</div>
                         <div *ngIf="emailInput.hasError('email')">Invalid email format</div>
                     </div>
@@ -46,7 +46,7 @@
 
                         #phoneInput = "ngModel"
                     > 
-                    <div class="text-danger" *ngIf="phoneInput.invalid && (phoneInput.dirty || feedbackfrom.submitted)">
+                    <div class="text-danger" *ngIf="phoneInput.invalid && (phoneInput.dirty || feedbackform.submitted)">
                         <div *ngIf="phoneInput.hasError('pattern')">Invalid phone number is required</div>
                     </div>
 
@@ -82,9 +82,9 @@
 
                         required
                         #TitleInput = "ngModel"
-                        pattern="[A-Za-z0-9\s]"
+                        
                     >
-                    <div class="text-danger" *ngIf="TitleInput.invalid && (TitleInput.dirty || feedbackfrom.submitted)">
+                    <div class="text-danger" *ngIf="TitleInput.invalid && (TitleInput.dirty || feedbackform.submitted)">
                         <div *ngIf="TitleInput.hasError('required')"> Title is required</div>
                     </div>
                 </div>
@@ -100,12 +100,11 @@
                         [(ngModel)] = "feedback.feedback" 
 
                         required
-                        pattern="[A-Za-z0-9\s]"
-
+                       
                         #feedbackInput = "ngModel"
                     >
 
-                    <div class="text-danger" *ngIf="feedbackInput.invalid && (feedbackInput.dirty || feedbackfrom.submitted)">
+                    <div class="text-danger" *ngIf="feedbackInput.invalid && (feedbackInput.dirty || feedbackform.submitted)">
                         <div *ngIf="feedbackInput.hasError('required')">feedback  is required</div>
                     </div>
 
@@ -115,8 +114,8 @@
                 <div class="mb-3">
                    <button type="submit" 
                    class="btn btn-primary"
-                   [disabled] = "!feedbackfrom.valid">
-                    <i class="bi bi-send"></i> Submint
+                   [disabled] = "!feedbackform.valid">
+                    <i class="bi bi-send"></i> Submit
                    </button>
                 </div>
                 

@@ -7,15 +7,15 @@ import { Feedback } from 'src/app/data/model/Feedback';
   styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent implements OnInit {
-  feedback: Feedback = new Feedback('','',0,'','');
+  feedback: Feedback = new Feedback('','',8,'','');
 
   ngOnInit(): void {
    
   }
 
-  SubmintFeedback(){
+  SubmitFeedback(){
     //Add code
-    console.log('feedback from [submit]', this.feedback)
+    console.log('feedback from [submit] - ', this.feedback);
   }
   
   
