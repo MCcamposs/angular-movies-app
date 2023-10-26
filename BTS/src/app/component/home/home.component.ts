@@ -21,7 +21,9 @@ export class HomeComponent implements OnInit{
   /* array vacio para probar el firebase */
   data: any [] = [];
 
-   /* INJECT HttpClient */
+
+   /*----INJECT HttpClien----*/
+   /* Esto lo hacemos para sacar la información de un Json */
    constructor(private httpClient: HttpClient, private apiServie: ApiService,/*  private _UsuarioServie: UsuarioService */){
   }
 

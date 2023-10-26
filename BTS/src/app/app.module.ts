@@ -16,9 +16,12 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AngularFireModule } from '@angular/fire/compat'
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
 import { environment } from '../environments/environment';
-/* import HttpClienteModule */
+/* ----import HttpClienteModule */
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderDirective } from './directives/header.directive'
+import { HeaderDirective } from './directives/header.directive';
+import { FeedbackComponent } from './component/feedback/feedback.component';
+
+
 
 @NgModule({
   /* DECLARANDO TODOS LOS COMPONENTES */
@@ -34,6 +37,7 @@ import { HeaderDirective } from './directives/header.directive'
     SearchComponent,
     NotFoundComponent,
     HeaderDirective,
+    FeedbackComponent,
     /* DIRECTIVE */
     
   ],
