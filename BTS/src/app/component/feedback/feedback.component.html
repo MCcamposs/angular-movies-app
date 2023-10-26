@@ -18,6 +18,9 @@
                         placeholder="ejemplo@email.com"
                         name = "emeailAddres"
                         [(ngModel)] = "feedback.emeailAddres"
+
+                        required
+                        email
                     >
                 </div>
         <!-- NUMERO DE TELEFONO -->
@@ -30,7 +33,9 @@
                         placeholder="numero personal"
                         name = "PhoneNumber"
                         [(ngModel)] = "feedback.PhoneNumber"
-                    >
+                        
+                        pattern="[0-9\-]"
+                    > <!-- patrón, numeros del 0 al 9 -->
                 </div>
         
         <!--RATE EXPERIENCE -->
@@ -45,6 +50,8 @@
                         id="rateExperience"
                         name = "rateExperience"
                         [(ngModel)] = "feedback.rate" 
+
+                    
                     > <!-- tiene que sar igual a las cont creadas en el data/model -->
                     <div>{{feedback.rate}}</div>
                 </div>
@@ -58,6 +65,9 @@
                         placeholder="Your feedback title"
                         name = "Title"
                         [(ngModel)] = "feedback.feedbackTtitle" 
+
+                        required
+                        pattern="[A-Za-z0-9\s]"
                     >
                 </div>
         
@@ -70,12 +80,17 @@
                         placeholder="Your feedback"
                         name = "feedback"
                         [(ngModel)] = "feedback.feedback" 
+
+                        required
+                        pattern="[A-Za-z0-9\s]"
                     >
                 </div>
         
         
                 <div class="mb-3">
-                   <button type="submit" class="btn btn-primary">
+                   <button type="submit" 
+                   class="btn btn-primary"
+                   [disabled] = "!feedbackfrom.valid">
                     <i class="bi bi-send"></i> Submint
                    </button>
                 </div>

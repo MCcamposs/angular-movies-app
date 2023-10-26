@@ -15,6 +15,7 @@ export class FeedbackComponent implements OnInit {
 
   SubmintFeedback(){
     //Add code
+    console.log('feedback from [submit]', this.feedback)
   }
   
   
