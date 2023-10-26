@@ -21,7 +21,15 @@
 
                         required
                         email
+
+                        #emailInput = "ngModel"
                     >
+
+                    <div class="text-danger" *ngIf="emailInput.invalid && (emailInput.dirty || feedbackfrom.submitted)">
+                        <div *ngIf="emailInput.hasError('required')">Email is required</div>
+                        <div *ngIf="emailInput.hasError('email')">Invalid email format</div>
+                    </div>
+
                 </div>
         <!-- NUMERO DE TELEFONO -->
                 <div class="mb-3">
@@ -34,8 +42,14 @@
                         name = "PhoneNumber"
                         [(ngModel)] = "feedback.PhoneNumber"
                         
-                        pattern="[0-9\-]"
-                    > <!-- patrón, numeros del 0 al 9 -->
+                        pattern="[0-9]{4}-[0-9]{4}"
+
+                        #phoneInput = "ngModel"
+                    > 
+                    <div class="text-danger" *ngIf="phoneInput.invalid && (phoneInput.dirty || feedbackfrom.submitted)">
+                        <div *ngIf="phoneInput.hasError('pattern')">Invalid phone number is required</div>
+                    </div>
+
                 </div>
         
         <!--RATE EXPERIENCE -->
@@ -67,8 +81,12 @@
                         [(ngModel)] = "feedback.feedbackTtitle" 
 
                         required
+                        #TitleInput = "ngModel"
                         pattern="[A-Za-z0-9\s]"
                     >
+                    <div class="text-danger" *ngIf="TitleInput.invalid && (TitleInput.dirty || feedbackfrom.submitted)">
+                        <div *ngIf="TitleInput.hasError('required')"> Title is required</div>
+                    </div>
                 </div>
         
                 <div class="mb-3">
@@ -83,7 +101,14 @@
 
                         required
                         pattern="[A-Za-z0-9\s]"
+
+                        #feedbackInput = "ngModel"
                     >
+
+                    <div class="text-danger" *ngIf="feedbackInput.invalid && (feedbackInput.dirty || feedbackfrom.submitted)">
+                        <div *ngIf="feedbackInput.hasError('required')">feedback  is required</div>
+                    </div>
+
                 </div>
         
         
