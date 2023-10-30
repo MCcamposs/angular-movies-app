@@ -12,7 +12,7 @@ export class FeedbackComponent implements OnInit {
 /*   feedback: Feedback = new Feedback('','',8,'','');*/
   feedbackForm!: FormGroup;
 
-  constructor(private fb:FormBuilder){
+  constructor(){
     
   }
   ngOnInit(): void {
