@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
@@ -49,7 +49,9 @@ import { FeedbackComponent } from './component/feedback/feedback.component';
     HttpClientModule,
     /* Inicializamos para poder usar firebase */
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
