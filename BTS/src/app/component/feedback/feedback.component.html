@@ -26,6 +26,8 @@
                         <div *ngIf="feedbackForm.get('emailAddress')?.hasError('required')">Email is required</div>
 
                         <div *ngIf="feedbackForm.get('emailAddress')?.hasError('email')">Invalid email format</div>
+                        <!-- otro check, nombre igual que en el email.validator -->
+                        <div *ngIf="feedbackForm.get('emailAddress')?.hasError('invalidDomain')">Invalid email format</div>
                     </div>
 
                 </div>
@@ -97,6 +99,8 @@
                     *ngIf="feedbackForm.get('Feedback')?.invalid &&
                     feedbackForm.get('Feedback')?.dirty">
                         <div *ngIf="feedbackForm.get('Feedback')?.hasError('required')">Feedback is required</div>
+
+                        <div *ngIf="feedbackForm.get('Feedback')?.hasError('inappropriateKeyword')">Remove inappropriate Key word</div>
                     </div>
 
                 </div>
