@@ -53,7 +53,8 @@ import { AuthModule } from '@auth0/auth0-angular';
     AngularFirestoreModule,
 
     ReactiveFormsModule,
-
+    
+    // Import the module into the application, with configuration
     AuthModule.forRoot({
       domain: '',
       clientId:'',
