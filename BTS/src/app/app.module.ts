@@ -20,7 +20,8 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderDirective } from './directives/header.directive';
 import { FeedbackComponent } from './component/feedback/feedback.component';
-
+/*  */
+import { AuthModule } from '@auth0/auth0-angular';
 
 
 @NgModule({
@@ -51,7 +52,16 @@ import { FeedbackComponent } from './component/feedback/feedback.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    AuthModule.forRoot({
+      domain: '',
+      clientId:'',
+      authorizationParams:{
+        redirect_uri:window.location.origin
+      }
+    }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
