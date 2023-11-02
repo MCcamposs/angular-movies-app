@@ -20,7 +20,7 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderDirective } from './directives/header.directive';
 import { FeedbackComponent } from './component/feedback/feedback.component';
-/*  */
+/*  Import the module from the SDK */
 import { AuthModule } from '@auth0/auth0-angular';
 
 
@@ -53,7 +53,7 @@ import { AuthModule } from '@auth0/auth0-angular';
     AngularFirestoreModule,
 
     ReactiveFormsModule,
-    
+
     // Import the module into the application, with configuration
     AuthModule.forRoot({
       domain: '',
